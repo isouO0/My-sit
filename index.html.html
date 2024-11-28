@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي الشخصي</title>
+    <style>
+        /* خلفية مثيرة ومغبشة */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP4Fkl3FcPnDU2DavtnCFhOvbibu2xA3uvShxWkwVUq6q1Ucwhhts4HM0&s=10') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        /* التأثير على الخلفية فقط وليس المحتوى الأمامي */
+        .background-blur {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://pbs.twimg.com/media/FjptPCPWIAMkJCz?format=jpg&name=large') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(5px);
+            /* تقليل الغباشة */
+            z-index: -1;
+            /* يجعل الخلفية خلف المحتوى */
+        }
+
+        /* تصحيح محتوى الصفحة ليظهر بشكل مركزي */
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            z-index: 1;
+            position: relative;
+        }
+
+        /* تنسيق الأيقونات الاجتماعية */
+        .social-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            z-index: 1;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            background-color: rgba(0, 0, 0, 0.8);
+            /* تغيير الخلفية عند التفاعل */
+        }
+
+        /* تأثير الأنميشن على الأيقونات عند التحميل */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .social-icons a {
+            animation: slideIn 1s ease-out forwards;
+        }
+
+        /* تنسيق النصوص */
+        h1, p {
+            z-index: 1;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        /* التأثير على الصور */
+        .content img {
+            filter: blur(15px);
+            /* تقليل غباشة الصورة */
+            transition: filter 1.5s ease;
+        }
+
+        .content img:hover {
+            filter: blur(0);
+        }
+
+        /* تأثير الحركة للصور المتحركة من الأعلى لليمين إلى اليسار */
+        @keyframes slideFromTop {
+            0% {
+                transform: translateX(100%) translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* التنسيق للصور المتحركة */
+        .moving-images {
+            position: absolute;
+            top: -50px;
+            animation: slideFromTop 3s ease-out forwards;
+            z-index: 2;
+        }
+
+        .moving-images img {
+            margin-left: 50px;
+            width: 50px;
+            /* يمكن تغيير الحجم حسب الحاجة */
+        }
+
+        /* تنسيق الإطار الأبيض حول الصور */
+        .image-frame {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .image-frame img {
+            width: 200px;
+            height: 200px;
+            border: 5px solid white;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-frame img:hover {
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- خلفية مغبشة -->
+    <div class="background-blur"></div>
+
+    <!-- صور متحركة -->
+    <div class="moving-images">
+        <img src="https://example.com/subscription-icon.png" alt="اشتراك">
+        <img src="https://example.com/fire-icon.png" alt="🔥">
+    </div>
+
+    <!-- محتوى الصفحة -->
+    <div class="content">
+        <h1>🔥Welcome to my website🔥!</h1>
+        <p>
+            🔥enjoy🔥
+        </p>
+
+        <!-- الأيقونات الاجتماعية مرتبة عموديًا -->
+        <div class="social-icons">
+            <a href="https://x.com/sweetpantherbbw?s=21" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/thesweetpantherbbws?igsh=OXo2djZ4czUxOGFu" target="_blank">Instagram</a>
+            <a href="https://onlyfans.com/sweetpantherbbws" target="_blank">OnlyFans</a>
+            <a href="https://onlyfans.com/sweetpantherbbws" target="_blank">Pornhub</a>
+        </div>
+
+        <!-- صور داخل إطار أبيض -->
+        <div class="image-frame">
+            <img src="https://pbs.twimg.com/media/GdaeAdtX0AEb5Xd?format=jpg&name=medium" alt="صورة 1">
+            <img src="https://pbs.twimg.com/media/Gdac6x0WsAAseMy?format=jpg&name=large" alt="صورة 2">
+            <img src="https://pbs.twimg.com/media/GdUPsjpXcAA98hy?format=jpg&name=medium" alt="صورة 3">
+        </div>
+    </div>
+</body>
+</html><link rel="stylesheet" type="text/css" href="<script src="<a href="http://www.example.com">example</a>" />">
